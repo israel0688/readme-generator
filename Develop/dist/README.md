@@ -1,9 +1,9 @@
 
 
-  # readme generator
+  # Readme Generator
 
   ## Description
-    * a project that helps others generate a professional readme 
+    * An app that helps users develop a professional readme.md 
   
   ## Table of Contents
   
@@ -14,22 +14,22 @@
   
   
   ## Installation
-   * I will include a video
+   * A video will be included
     
   ## Usage 
-    * email me
+    * N/A
   
   
   ## License
-  
+    * MIT
   
   ## Contributing
-    * email me
+    * none at the moment
   
   ## Tests
-    * email me
+    * N/A
 
   ## Questions & How to Reach Me
-    * github.com/israel0688
+    * https://github.com/israel0688
     * israel0688@hotmail.com
   
