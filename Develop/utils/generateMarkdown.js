@@ -23,7 +23,7 @@ function generateMarkdown(data) {
   
   
   ## License
-  
+    * ${data.license}
   
   ## Contributing
     * ${data.contribution}
@@ -32,7 +32,7 @@ function generateMarkdown(data) {
     * ${data.testInstructions}
 
   ## Questions & How to Reach Me
-    * github.com/${data.github}
+    * https://github.com/${data.github}
     * ${data.email}
   `;
 

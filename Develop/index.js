@@ -46,6 +46,11 @@ const questions = () => {
             type: 'input',
             name: 'email',
             message: "Please enter your email address."
+        },
+        {
+            type: 'input',
+            name: 'license',
+            message: 'Include License'
         }
     ]);
 };
