@@ -30,6 +30,10 @@ function generateMarkdown(data) {
   
   ## Tests
     * ${data.testInstructions}
+
+  ## Questions & How to Reach Me
+    * github.com/${data.github}
+    * ${data.email}
   `;
 
 }

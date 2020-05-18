@@ -1,9 +1,9 @@
 
 
-  # lsakdfj
+  # readme generator
 
   ## Description
-    * as;ldkfjlksaj 
+    * a project that helps others generate a professional readme 
   
   ## Table of Contents
   
@@ -14,18 +14,22 @@
   
   
   ## Installation
-   * as;ldkjf;lkasdj
+   * I will include a video
     
   ## Usage 
-    * slkdjf;lkasdj
+    * email me
   
   
   ## License
   
   
   ## Contributing
-    * sa;lkdjflas;kj
+    * email me
   
   ## Tests
-    * ;sladkfjasd;
+    * email me
+
+  ## Questions & How to Reach Me
+    * github.com/israel0688
+    * israel0688@hotmail.com
   

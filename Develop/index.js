@@ -36,58 +36,20 @@ const questions = () => {
             type: 'input',
             name: 'testInstructions',
             message: 'Please enter test instructions'
+        },
+        {
+            type: 'input',
+            name: 'github',
+            message: 'Please enter your github username.'
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: "Please enter your email address."
         }
     ]);
 };
 
-//questions().then(answers => console.log(answers)); 
-/*
-// function to generate readme file
-const generatePage = projectsArr => {
-  
-    return `
-
-      ${projectsArr
-        .filter(({ feature }) => feature)
-        .map(({ projectTitle, description, installInstructions, usage, contribution, testInstructions}) => {
-
-    return `
-  # ${projectTitle}
-
-  ## Description
-    * ${description} 
-  
-  ## Table of Contents
-  
-  * [Installation](#installation)
-  * [Usage](#usage)
-  * [Credits](#credits)
-  * [License](#license)
-  
-  
-  ## Installation
-   * ${installInstructions}
-    
-  ## Usage 
-    * ${usage}
-  
-  
-  ## License
-  
-  
-  ## Contributing
-    * ${contribution}
-  
-  ## Tests
-    * ${testInstructions}
-  `;
-})}
-
-`;
-};
-*/
-
-//generatePage().then(projectTitle, description, installInstructions, usage, contribution, testInstructions => console.log(projectTitle, description, installInstructions, usage, contribution, testInstructions) );
 
 const writeFile = fileContent => 
 {
