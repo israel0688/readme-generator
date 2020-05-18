@@ -39,7 +39,7 @@ const questions = () => {
     ]);
 };
 
-questions().then(answers => console.log(answers));
+//questions().then(answers => console.log(answers)); 
 
 // function to generate readme file
 const generatePage = (projectTitle, description, installInstructions, usage, contribution, testInstructions) => {
@@ -47,7 +47,7 @@ const generatePage = (projectTitle, description, installInstructions, usage, con
   # ${projectTitle}
 
   ## Description
-    *${description} 
+    * ${description} 
   
   ## Table of Contents
   
@@ -58,38 +58,65 @@ const generatePage = (projectTitle, description, installInstructions, usage, con
   
   
   ## Installation
-   *${installInstructions}
+   * ${installInstructions}
     
   ## Usage 
-    *${usage}
+    * ${usage}
   
   
   ## License
   
   
   ## Contributing
-    *${contribution}
+    * ${contribution}
   
   ## Tests
-    *${testInstructions}
+    * ${testInstructions}
   `;
 };  
 
-// function to write README file
-//function writeToFile(fileName, data) {
-//}
+//generatePage().then(projectTitle, description, installInstructions, usage, contribution, testInstructions => console.log(projectTitle, description, installInstructions, usage, contribution, testInstructions) );
 
-/*fs.writeFile('./dist/README.md', generatPage(projectTitle, description, installInstructions, usage, contribution, testInstructions), err =>
+const writeFile = fileContent => 
 {
-    if (err) throw new Error(err);
+    return new Promise((resolve, reject) => 
+    {
+        fs.writeFile('./develop/dist/README.md', fileContent, err =>
+        {
+            // if there's an error, reject the Promise and send the error to the Promise's `.catch()` method
+            if (err)
+            {
+                reject(err);
+                // return out of the function here to make sure the Promise doesn't accidentally execute the resolve() function as well
+                return;
+            }
 
-    console.log('README complete! Check out README.md in dist folder to see the output!');
-});
-*/
+            // if everything went well, resolve the Promise and send the successful data to the `.then()` method
+            resolve(
+                {
+                    ok: true,
+                    message: 'File created! '
+                });
+        });
+    });
+}; 
+
+
+
 // function to initialize program
 function init() {
 
-}
+questions()
+    .then(generatePage)
+
+    .then(writeFile)
+    .catch(err =>
+        {
+            console.log(err);
+        });
+
+}; 
 
 // function call to initialize program
 init();
+
