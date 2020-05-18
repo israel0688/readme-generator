@@ -1,5 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
+const generateMarkdown = require('./utils/generateMarkdown.js');
 
 
 
@@ -40,10 +41,17 @@ const questions = () => {
 };
 
 //questions().then(answers => console.log(answers)); 
-
+/*
 // function to generate readme file
-const generatePage = (projectTitle, description, installInstructions, usage, contribution, testInstructions) => {
-  return `
+const generatePage = projectsArr => {
+  
+    return `
+
+      ${projectsArr
+        .filter(({ feature }) => feature)
+        .map(({ projectTitle, description, installInstructions, usage, contribution, testInstructions}) => {
+
+    return `
   # ${projectTitle}
 
   ## Description
@@ -73,7 +81,11 @@ const generatePage = (projectTitle, description, installInstructions, usage, con
   ## Tests
     * ${testInstructions}
   `;
-};  
+})}
+
+`;
+};
+*/
 
 //generatePage().then(projectTitle, description, installInstructions, usage, contribution, testInstructions => console.log(projectTitle, description, installInstructions, usage, contribution, testInstructions) );
 
@@ -107,9 +119,11 @@ const writeFile = fileContent =>
 function init() {
 
 questions()
-    .then(generatePage)
+    .then(generateMarkdown)
 
-    .then(writeFile)
+    .then(pageREADME =>{
+        return writeFile(pageREADME);
+    })
     .catch(err =>
         {
             console.log(err);
