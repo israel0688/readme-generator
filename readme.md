@@ -8,10 +8,6 @@
 
 [Link to Walkthrough Video](https://drive.google.com/file/d/1bpbp06ZVglBpDudKtp6Qar3auRz1tSdE/view)
 
-### Sameple Readme File
-
-[Link to Sample readme file](https://github.com/israel0688/readme-generator/tree/master/Develop/dist) 
-
 ### GitHub Repository 
 
 [Link to Github Repository](https://github.com/israel0688/readme-generator)
