@@ -1,4 +1,4 @@
-## README Generator Project
+## README Generator
 
 ### About
     * A professional readme generator designed to help those who need something done fast and in a professional manner
